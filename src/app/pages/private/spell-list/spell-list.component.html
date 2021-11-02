@@ -1,0 +1,43 @@
+<div class="user-list"
+     fxLayout="row wrap"
+     fxLayoutGap="10px"
+     fxFlexOffset="20px"
+     gdGridAlign="space-around start">
+
+  <app-spell *ngFor="let spell of spellList | async"
+             [spell]="spell"
+  (editEmit)="edit($event)">
+  </app-spell>
+
+</div>
+
+<div class="dialog_scrim" *ngIf="openMenu" (click)="clickMenu()">
+</div>
+<button mat-fab color="accent" (click)="clickMenu()"
+        class="menu-button"
+        [class.mat-elevation-z2]="!isOver"
+        [class.mat-elevation-z8]="isOver"
+        (mouseover)="isOver = true"
+        (mouseleave)="isOver = false">
+  <i class="material-icons" *ngIf="!openMenu">menu</i>
+  <i class="material-icons" *ngIf="openMenu">close</i>
+</button>
+
+<!-- menu button -->
+<button mat-mini-fab
+        class="action-button one mat-elevation-z8"
+        *ngIf="openMenu"
+        color="basic"
+        (click)="openCreateSpell()"
+>
+  <i class="material-icons">face</i>
+</button>
+
+<button mat-raised-button
+        class="label labelone mat-elevation-z8"
+        *ngIf="openMenu"
+        color="basic"
+        (click)="openCreateSpell()"
+>
+  Create Spell
+</button>

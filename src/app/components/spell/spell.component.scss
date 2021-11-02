@@ -1,0 +1,62 @@
+.spell {
+  &-card {
+    width: 230px;
+    min-height: 200px;
+  }
+
+  &-lvl {
+    border-radius: 30px;
+    border: 1px solid #610000;
+    background-color: #760000;
+    color: white;
+    text-align: center;
+    width: 1.5em;
+    height: 1.5em;
+  }
+
+  &-title {
+    padding: 20px 0 10px 0;
+    font-weight: 400;
+    font-size: 1.3em;
+    text-align: center;
+  }
+
+  &-class {
+    text-decoration: underline;
+    font-weight: 200;
+    padding-bottom: 10px;
+  }
+
+  &-card--content {
+    padding: 0 3px;
+    margin: -5px 0px;
+
+    //min-height: 200px;
+  }
+
+  &-sub-content {
+    height: 250px;
+  }
+
+  &-description {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+  }
+
+  &-bottom > * {
+    font-weight: 500;
+  }
+
+}
+
+.menu-right {
+  position: absolute;
+  margin-top: auto;
+  top: 0;
+  right: 0;
+
+}

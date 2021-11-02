@@ -1,0 +1,34 @@
+<mat-card class="spell-card">
+<!--  <div class="menu-right">-->
+<!--    <button mat-icon-button-->
+<!--            [matMenuTriggerFor]="menu"-->
+<!--            aria-label="Example icon-button with a menu">-->
+<!--      <mat-icon>more_vert</mat-icon>-->
+<!--    </button>-->
+<!--    <mat-menu #menu="matMenu">-->
+<!--      <button mat-menu-item (click)="editEmit.emit(spell)">-->
+<!--        <mat-icon>edit</mat-icon>-->
+<!--        <span>Edit</span>-->
+<!--      </button>-->
+<!--    </mat-menu>-->
+<!--  </div>-->
+  <mat-card-content class="spell-card--content" fxLayout="column" fxFlex="1 1 auto">
+
+    <div fxLayoutAlign="start start">
+      <div class="spell-lvl">{{spell.Livello}}</div>
+    </div>
+
+
+    <div fxLayout="column" class="spell-sub-content" fxFlex="1 1 auto">
+      <div fxLayoutAlign="center center" class="spell-title">{{spell.Nome}}</div>
+      <div fxLayoutAlign="center center" class="spell-class">{{spell.Classe}}</div>
+      <div  class="spell-description">
+        {{spell.Descrizione}}
+      </div>
+      <div fxLayoutAlign="space-between end" fxFlex="1 1 auto" class="spell-bottom">
+        <div>CD: {{spell.CD}}</div>
+        <div>TS: {{spell.TS}}</div>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>

@@ -1,0 +1,40 @@
+<div class="box" fxLayout="row" fxLayoutAlign="center center">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Spell</mat-card-title>
+    </mat-card-header>
+
+    <form class="example-form" [formGroup]="form">
+      <mat-card-content>
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Nome" [formControlName]="'nome'">
+          <mat-error *ngIf="isInvalid('nome')">Name required</mat-error>
+
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Descrizione" [formControlName]="'descrizione'">
+          <mat-error *ngIf="isInvalid('descrizione')">Description required</mat-error>
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Cd" [formControlName]="'cd'">
+          <mat-error *ngIf="isInvalid('cd')">Cd required</mat-error>
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Livello" [formControlName]="'livello'">
+          <mat-error *ngIf="isInvalid('livello')">Level required</mat-error>
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Ts" [formControlName]="'ts'">
+          <mat-error *ngIf="isInvalid('ts')">Ts required</mat-error>
+        </mat-form-field>
+      </mat-card-content>
+      <mat-card-content>
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Class" [formControlName]="'classe'">
+          <mat-error *ngIf="isInvalid('classe')">Class required</mat-error>
+        </mat-form-field>
+      </mat-card-content>
+      <button mat-stroked-button color="accent" class="btn-block" (click)="save()">Save</button>
+    </form>
+  </mat-card>
+</div>

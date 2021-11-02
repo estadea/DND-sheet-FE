@@ -1,0 +1,32 @@
+<mat-card class="user-card">
+  <div class="menu-right">
+    <button mat-icon-button
+            [matMenuTriggerFor]="menu"
+            aria-label="Example icon-button with a menu">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item (click)="edit(user)">
+        <mat-icon>edit</mat-icon>
+        <span>Edit</span>
+      </button>
+      <button mat-menu-item (click)="delete(user.username)">
+        <mat-icon>edit</mat-icon>
+        <span>Delete</span>
+      </button>
+    </mat-menu>
+  </div>
+  <mat-card-header>
+    <div [ngSwitch]="user.sex">
+      <img *ngSwitchCase="'F'" mat-card-sm-image src="../assets/avatar/female.png">
+      <img *ngSwitchCase="'M'" mat-card-sm-image src="../assets/avatar/male.png">
+      <img *ngSwitchDefault mat-card-sm-image src="../assets/avatar/male.png">
+    </div>
+  </mat-card-header>
+  <mat-card-content class="user-card--content">
+    <div fxLayout="column" fxLayoutAlign="center center">
+      <div>{{user.username}}</div>
+      <div>{{user.email}}</div>
+    </div>
+  </mat-card-content>
+</mat-card>

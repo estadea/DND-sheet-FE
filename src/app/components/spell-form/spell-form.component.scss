@@ -1,0 +1,27 @@
+
+.example-form {
+  min-width: 100%;
+  max-width: 300px;
+  width: 100%;
+}
+
+.mat-card {
+  padding: 40px 70px 50px;
+}
+
+.mat-stroked-button {
+  border: 1px solid currentColor;
+  line-height: 54px;
+  background: #FFF7FA;
+}
+
+.example-full-width, .btn-block {
+  width: 100%;
+}
+
+mat-card-header {
+  text-align: center;
+  width: 100%;
+  display: block;
+  font-weight: 700;
+}

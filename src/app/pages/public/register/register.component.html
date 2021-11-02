@@ -1,0 +1,37 @@
+<div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
+  <mat-card class="box">
+    <mat-card-header>
+      <mat-card-title>Register</mat-card-title>
+    </mat-card-header>
+
+    <form class="example-form" [formGroup]="form">
+
+      <mat-card-content>
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Username *" [formControlName]="'username'">
+          <mat-error *ngIf="isInvalid('username')">Username required</mat-error>
+
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Email *" [formControlName]="'email'">
+          <mat-error *ngIf="isInvalid('email')?.required">Email required</mat-error>
+          <mat-error *ngIf="isInvalid('email')?.email">Insert a valid email</mat-error>
+
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Password *" [formControlName]="'password'">
+          <mat-error *ngIf="isInvalid('password')?.required">Password required</mat-error>
+          <mat-error *ngIf="isInvalid('password')?.pattern">Insert at least 8 characters with at least 1 special character of the list !$£/()=?^*+><.,:_+@</mat-error>
+
+        </mat-form-field>
+
+
+      </mat-card-content>
+
+      <button mat-stroked-button color="accent" class="btn-block" (click)="signup()">Register</button>
+
+    </form>
+  </mat-card>
+</div>
